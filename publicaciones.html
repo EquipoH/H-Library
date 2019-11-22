@@ -1,0 +1,125 @@
+<head>
+      
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<meta charset="UTF-8">
+<style>
+#more {display: none;}
+img {
+  float: right;
+}
+.button {
+  background-color: ##008CBA; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button2 {background-color: #008CBA;} /* Blue */
+.button3 {background-color: #f44336;}
+</style>
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<section>
+  <div class="container py-3">
+    
+         <h2>Menciones honoríficas</h2>
+         <img src="cien.jpg" alt="John" style="width:400px;height: 630px; ">
+          <div class="card">
+          <div class="col-md-8 px-3">
+
+            <div class="card-block px-3">
+              <h3 class="card-title">
+              Cien años de Soledad </h3>
+              <h5 class="card-title">¡Esta novela ha vendido más de 50 millones de copias y se ha traducido a más de 40 idiomas!</h5>
+              <p class="card-text"> <b>Páginas: </b> 471 </p>
+              <p class="card-text"> <b>Autor: </b>Gabriel García Márquez</p>
+              <p class="card-text"> <b>Fecha de publicación:  </b> 1967 </p>
+              <p class="card-text"> <b>Idioma original:  </b> Español </p>
+              <p class="card-text"> <b>Género:  </b>  
+               Novela  
+              </p>
+              <p class="card-text"> <b>Subgénero:  </b>  
+               Realismo mágico  
+              </p>
+               <h4 class="card-title">Descripción</h4>
+                <p class="card-text">100 años de soledad es la historia de siete generaciones de la familia Buendía en la ciudad de Macondo. El patriarca fundador de Macondo, José Arcadio Buendía, y Úrsula Iguarán, su esposa y prima hermana, dejan atrás a Riohacha localidad de Colombia para encontrar una vida mejor y un nuevo hogar<span id="dots">...</span><span id="more"><a href="http://resumiendolo.com/c-novela/100-anos-de-soledad/#Resumen_De_Cien_Anos_De_Soledad"> seguir leyendo.</a></span></p>
+               
+                <a onclick="myFunction();" id="myBtn" class="button button2">Leer más</a>
+            </div>
+          </div>
+        </div>
+        <br/>
+        <img src="dos.jpg" alt="Pineapple" style="width:400px;height: 500px; ">
+         <div class="card">
+          <div class="col-md-8 px-3">
+            <div class="card-block px-3">
+              <h3 class="card-title">Historia de dos ciudades </h3>
+              <h5 class="card-title">¡Más de 200 millones de ventas!</h5>
+              <p class="card-text"> <b>Nombre  original: </b> A Tale of Two Cities </p>
+              <p class="card-text"> <b>Autor: </b>Charles John Huffam Dickens</p>
+              <p class="card-text"> <b>Fecha de publicación:  </b> 1859 </p>
+              <p class="card-text"> <b>Idioma:  </b> Inglés </p>
+              <p class="card-text"> <b>Género:  </b>  
+               Novela histórica y novela social 
+              </p>
+               <h4 class="card-title">Descripción</h4>
+              
+               <p class="card-text">Esta novela es particularmente distinta a las demás que escribió, las cuales se basan en su mayoría en historias protagonizadas por niños o adolescentes y muestran una intención de reprimenda o denuncia de la <a href="https://www.comunidadbaratz.com/blog/los-20-libros-mas-vendidos-en-el-mundo/"> seguir leyendo.</a>  </p>
+         
+              <a onclick="location.href='index.php'" class="button button3">Menú</a>
+                </div>
+          </div>
+        </div>           
+
+              
+              <script>
+        function myFunction() {
+        var dots = document.getElementById("dots");
+        var moreText = document.getElementById("more");
+       var btnText = document.getElementById("myBtn");
+
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Leer más"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Leer menos"; 
+    moreText.style.display = "inline";
+  }
+
+}
+       function myFunctiona() {
+        var dots = document.getElementById("dotsa");
+        var moreText = document.getElementById("mores");
+       var btnText = document.getElementById("myBtna");
+
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Leer menos"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Leer más"; 
+    moreText.style.display = "inline";
+  }
+
+}
+
+
+</script>
+            
+    
+  </div>
+</section>
+</head>

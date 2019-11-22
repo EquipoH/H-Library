@@ -57,13 +57,18 @@
         <ul class ="submenu">
           <li><a class="nav-link" href="#" tabindex="10">Artistas</a>
           <ul class ="personas">
-            <li><a class="nav-link" href="gabriela.html" tabindex="14">Gabriel García Márquez </a></li>
-            <li><a class="nav-link" href="#" tabindex="15">Charles Dickens </a></li>
+            <li><a class="nav-link" href="perfilGabriel.html" tabindex="14">Gabriel García Márquez </a></li>
+            <li><a class="nav-link" href="perfilDickens.html" tabindex="15">Charles Dickens </a></li>
             </li>
           </ul>
           <li><a class="nav-link" href="#" tabindex="11">Categorías</a></li>
-          <li><a class="nav-link" href="#" tabindex="12">Página de colecciones de artistas</a></li>
-          <li><a class="nav-link" href="#" tabindex="13">Página de publicaciones</a></li>
+          <li><a class="nav-link" href="#" tabindex="12">Página de colecciones de artistas</a>
+            <ul class ="personasdos">
+            <li><a class="nav-link" href="gabriela.html" tabindex="17">Gabriel García Márquez </a></li>
+            <li><a class="nav-link" href="dickens.html" tabindex="18">Charles Dickens </a></li>
+          </ul>
+          </li>
+          <li><a class="nav-link" href="publicaciones.html" tabindex="13">Página de publicaciones</a></li>
         </ul> 
       </li>
       <li class="nav-item">

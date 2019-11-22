@@ -1,0 +1,85 @@
+<head>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<meta charset="UTF-8">
+<style>
+#more {display: none;}
+img {
+  float: right;
+}
+.button {
+  background-color: ##008CBA; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button2 {background-color: #008CBA;} /* Blue */
+.button3 {background-color: #f44336;}
+</style>
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<section>
+  <div class="container py-3">
+    
+       
+         <img src="gab.jpg" alt="John" style="width:600px;height: 490px; ">
+          <div class="card">
+          <div class="col-md-8 px-3">
+
+            <div class="card-block px-3">
+              <h4 class="card-title">Gabriel García Márquez</h4>
+              <p class="card-text"> <b>Nombre  completo: </b> Gabriel José de la Concordia García Márquez</p>
+              <p class="card-text"> <b>Lugar de nacimiento: </b>Municipio de Aracata, Magdalena, Colombia</p>
+              <p class="card-text"> <b>Fecha de nacimiento:  </b>6 de marzo de 1927</p>
+              <p class="card-text"> <b>Murió:  </b>17 de abril de 2014 en Ciudad de México</p>
+              <p class="card-text"> <b>Libros más destacados:  </b> Cien Años de Soledad, Crónica de una Muerte Anunciada, Del Amor y Otros Demonios, Doce Cuentos Peregrinos, El Amor En Los Tiempos Del Cólera, El Coronel No Tiene Quien Le Escriba, Noticia de un Secuestro, Relato De Un Naufrago, Vivir Para Contarla. </p>
+
+            </div>
+          </div>
+        </div>
+        <br/>
+        <img src="Marquez.jpg" alt="Pineapple" style="width:600px;height: 450px; ">
+         <div class="card">
+          <div class="col-md-8 px-3">
+            <div class="card-block px-3">
+              <br><h5 class="card-title">Información: </h5>
+              <p class="card-text">Gabriel García Márquez fue un escritor novelista, cuentista, guionista, editor y periodista, Premio Nobel de Literatura en el año de 1982 y uno de los grandes maestros de la literatura universal. Está relacionado de manera inherente con el realismo mágico y su obra más conocida, la novela Cien años de soledad, es considerada una de las más representativas de este movimiento literario, e incluso se considera que por el éxito de la novela es que tal término se aplica a la literatura surgida a partir de los años 1960 en América Latina <span id="dots">...</span><span id="more"><a href="http://www.elresumen.com/biografias/gabriel_garcia_marquez.htm"> Seguir leyendo.</a> </span></p> 
+              <a onclick="myFunction();" id="myBtn" class="button button2">Leer más</a>
+              <a onclick="location.href='index.php'" class="button button3">Menú</a>
+                </div>
+          </div>
+        </div>           
+
+              
+              <script>
+        function myFunction() {
+        var dots = document.getElementById("dots");
+        var moreText = document.getElementById("more");
+       var btnText = document.getElementById("myBtn");
+
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Leer más"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Leer menos"; 
+    moreText.style.display = "inline";
+  }
+
+}
+</script>
+            
+    
+  </div>
+</section>
+</head>
