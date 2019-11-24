@@ -61,7 +61,7 @@
             <li><a class="nav-link" href="perfilDickens.html" tabindex="15">Charles Dickens </a></li>
             </li>
           </ul>
-          <li><a class="nav-link" href="#" tabindex="11">Categorías</a></li>
+          <li><a class="nav-link" href="categorias.html" tabindex="11">Categorías</a></li>
           <li><a class="nav-link" href="#" tabindex="12">Página de colecciones de artistas</a>
             <ul class ="personasdos">
             <li><a class="nav-link" href="gabriela.html" tabindex="17">Gabriel García Márquez </a></li>
