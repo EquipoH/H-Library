@@ -17,9 +17,9 @@
 				<BR></BR>
 				<BR></BR>
 				<BR></BR>
-				<INPUT TYPE="BUTTON" VALUE="Iniciar sesión" ONCLICK="window.location.href='../login/iniciarSesion.php'"></INPUT>
+				<INPUT TYPE="BUTTON" VALUE="Iniciar sesión" ONCLICK="window.location.href='login/iniciarSesion.php'"></INPUT>
 				<BR></BR>
-				<INPUT TYPE="BUTTON" VALUE="Registrarme" ONCLICK="window.location.href='../login/registro.php'"></INPUT>
+				<INPUT TYPE="BUTTON" VALUE="Registrarme" ONCLICK="window.location.href='login/registro.php'"></INPUT>
 				<BR></BR>
 			</CENTER>
 		</DIV>
