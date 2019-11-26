@@ -1,10 +1,10 @@
 ﻿<?php
 	include ("../php/conexion.php");
-	$id = $_POST['ID'];
 	$user = $_POST['USER'];
 	$contrasena = $_POST['CONTRASENA'];
 
-	$query = "SELECT * FROM usuario WHERE id = $id;";
+	$query = "SELECT * FROM usuario WHERE usuario = '$user';";
+	echo $query;
 	$resultado = mysqli_query($connect, $query) or die ("Algo salió mal...");
 
 	$nfilas = mysqli_num_rows($resultado);
@@ -14,7 +14,7 @@
 	}
 	else
 	{
-		$query = "INSERT INTO usuario VALUES($id, '$user', '$contrasena')";
+		$query = "INSERT INTO usuario VALUES(null, '$user', '$contrasena')";
 		$resultado = mysqli_query($connect, $query) or die ("Algo salió mal...");
 		Header("Location: iniciarSesion.php");
 	}

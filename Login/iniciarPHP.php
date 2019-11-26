@@ -3,7 +3,7 @@
 	$usuario = $_POST['USUARIO'];
 	$contrasena = $_POST['CONTRASENA'];
 
-	$query2 = "SELECT * FROM usuario WHERE id = $usuario AND contrasena = '$contrasena';";
+	$query2 = "SELECT * FROM usuario WHERE usuario = '$usuario' AND contrasena = '$contrasena';";
 	$resultado2 = mysqli_query($connect, $query2) or die ("Algo salió mal 2...");
 	$nfilas2 = mysqli_num_rows($resultado2);
 

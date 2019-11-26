@@ -15,8 +15,6 @@
 		<FORM ACTION="registroPHP.php" METHOD="POST">
 			<DIV>
 				<CENTER>
-						<BR></BR>
-					<INPUT TYPE="TEXT" NAME="ID" PLACEHOLDER="Id"></INPUT>
 					<BR></BR>
 					<INPUT TYPE="TEXT" NAME="USER" PLACEHOLDER="Usuario"></INPUT>
 					<BR></BR>
