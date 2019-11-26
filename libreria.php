@@ -211,8 +211,8 @@
         <p>&copy; 2019 Corporativo-H</p>
         <ul>
           <li style="display:inline;"><a href="/acerca-de">Acerca de </a></li>
-          <li style="display:inline;"><a href="/conectar"> Conectar </a></li>
-          <li style="display:inline;"><a href="/rrss"> Redes Sociales </a></li>
+          <li style="display:inline;"><a href="/conectar">Conectar </a></li>
+          <li style="display:inline;"><a href="redes.html">Redes Sociales </a></li>
         </ul>
       </footer>
 </body>
