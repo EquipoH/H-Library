@@ -18,7 +18,7 @@
 					<BR></BR>
 					<INPUT TYPE="TEXT" NAME="USER" PLACEHOLDER="Usuario"></INPUT>
 					<BR></BR>
-					<INPUT TYPE="TEXT" NAME="CONTRASENA" PLACEHOLDER="Contraseña"></INPUT>
+					<INPUT TYPE="PASSWORD" NAME="CONTRASENA" PLACEHOLDER="Contraseña"></INPUT>
 					<BR></BR>
 					<INPUT TYPE="SUBMIT" VALUE="OK" CLASS="elementos"></INPUT>
 					<BR></BR>
