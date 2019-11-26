@@ -1,4 +1,3 @@
-				<INPUT TYPE="BUTTON" VALUE="Registrarme" ONCLICK="window.location.href='login/registro.php'"></INPUT>
 ﻿<!DOCTYPE html>
 <html>
 <head>
