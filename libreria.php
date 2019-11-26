@@ -110,6 +110,9 @@
     </div>
   </nav>
   <br>
+  <br>
+  <br>
+  
   <div class="bd-example">
     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
@@ -160,7 +163,7 @@
         include 'php/conexion.php';
 
 
-        $sql = $connect->query("SELECT * FROM `libro` ORDER BY fechaAniadido DESC");
+        $sql = $connect->query("SELECT libro.*,categoria.nombre as categoria,artista.nombre as artista FROM `libro` inner join categoria on categoria.id=libro.categoria inner JOIN artista on artista.id=libro.artista ORDER BY fechaAniadido DESC");
         $result = array();
 
 
@@ -181,7 +184,7 @@
 					<div class="card-body">
 						<h4 class="card-title">' . htmlentities($result[$i]['titulo'], ENT_COMPAT, 'ISO-8859-1', true) . '</h4>
 						<p class="card-text">' . htmlentities($result[$i]['artista'], ENT_COMPAT, 'ISO-8859-1', true)  . '</p>
-            <p class="card-text">' . htmlentities($result[$i]['genero'], ENT_COMPAT, 'ISO-8859-1', true)  . ' Articulos disponibles</p>
+            <p class="card-text">' . htmlentities($result[$i]['categoria'], ENT_COMPAT, 'ISO-8859-1', true)  . '</p>
             <p class="card-text">Añadido el ' . $result[$i]['fechaAniadido'] . '</p>
 					</div>
 					<div class="card-footer">
