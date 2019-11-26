@@ -99,6 +99,45 @@
   </div>
 </nav>
 
+
+<?php
+include 'php/conexion.php';
+
+for($i=0;$i<10;$i++){
+
+
+  echo '
+			<div class="col-12 col-sm-6 col-md-4" style="margin-top:10px">
+				<div class="card" style="height: 100%">
+					<img class="card-img-top" src="' . URL . 'public/imagenes/' . $producto[$i]['imagen'] . '" alt="Card image" style="height: 400px">
+					<div class="card-body">
+						<h4 class="card-title">' . htmlentities($producto[$i]['nombre'], ENT_COMPAT, 'ISO-8859-1', true) . '</h4>
+						<p class="card-text">$' . $producto[$i]['precio'] . '</p>
+						<p class="card-text">' . $producto[$i]['cantidad'] . ' Articulos disponibles</p>
+					</div>
+					<div class="card-footer">
+						<form method="post" action="' . URL . 'producto" style="margin-bottom: 5px">
+							<input type="hidden" name="id" value="' . $producto[$i]['id'] . '">
+							<button class="btn btn-secondary" type="submit">Ver Producto</button>
+						</form>
+						<input type="hidden" id="producto_' . $producto[$i]['id'] . '" value="' . $producto[$i]['id'] . '">
+						<input type="hidden" id="precio_' . $producto[$i]['id'] . '" value="' . $producto[$i]['precio'] . '">
+						<button id="carrito" value="' . $producto[$i]['id'] . '" type="button" class="btn btn-primary"><img src="' . URL . 'vista/carshop.png" alt="Logo" style="width:20px;">Añadir al Carrito</button>
+					</div>
+				</div>
+			</div>';
+
+}
+
+
+
+
+?>
+
+
+
+
+
 <footer>
   <p>&copy; 2019 Corporativo-H</p>
   <ul>
