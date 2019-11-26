@@ -25,11 +25,13 @@
 
     .submenu {
       position: absolute;
+      z-index: 99;
     }
 
     .submenu li a {
       display: block;
       background-color: #F1F1EE;
+      z-index: 99;
     }
 
     nav li:hover>ul {
@@ -109,18 +111,7 @@
 
     </div>
   </nav>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>  
-  <br>
-  <br>
-  <br>
-  
+
   <div class="bd-example">
     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
@@ -146,20 +137,20 @@
         <div class="carousel-item">
           <img src="src/openmind.jpg" class="d-block w-100" alt="..." width="500" height="500">
           <div class=" carousel-caption d-none d-md-block">
-          <h5>OpenMind ¡Comparte tu opinión!</h5>
-          <p>Ven este 2 de enero a las 7:00 Pm.</p>
+            <h5>OpenMind ¡Comparte tu opinión!</h5>
+            <p>Ven este 2 de enero a las 7:00 Pm.</p>
+          </div>
         </div>
       </div>
+      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
   </div>
 
   <br>
