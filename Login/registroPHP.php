@@ -1,6 +1,6 @@
 ﻿<?php
 	include ("../php/conexion.php");
-	$user = $_POST['USER'];
+	$user = $_POST['USUARIO'];
 	$contrasena = $_POST['CONTRASENA'];
 
 	$query = "SELECT * FROM usuario WHERE usuario = '$user';";
