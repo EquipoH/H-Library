@@ -110,9 +110,51 @@
     </div>
   </nav>
   <br>
+  <div class="bd-example">
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="src/gonvill.jpg" class="d-block w-100" alt="..." width="500" height="500">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Gonvill</h5>
+            <p>Abre sus puertas a nuevos lectores.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="src/feria.jpg" class=" d-block w-100" alt="..." width="500" height="500">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Feria internacional del libro</h5>
+            <p>H-Library se invita a participar</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="src/openmind.jpg" class="d-block w-100" alt="..." width="500" height="500">
+          <div class=" carousel-caption d-none d-md-block">
+          <h5>OpenMind ¡Comparte tu opinión!</h5>
+          <p>Ven este 2 de enero a las 7:00 Pm.</p>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  </div>
+
+  <br>
   <div class="container">
     <div class="row">
-      
+
       <div class="card-columns">
         <?php
         include 'php/conexion.php';
