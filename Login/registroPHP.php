@@ -15,7 +15,7 @@
 	else
 	{
 		$query = "INSERT INTO usuario VALUES($id, '$user', '$contrasena')";
-		$resultado = mysqli_query($conexion, $query) or die ("Algo salió mal...");
+		$resultado = mysqli_query($connect, $query) or die ("Algo salió mal...");
 		Header("Location: iniciarSesion.php");
 	}
 ?>

@@ -104,7 +104,7 @@
       </form>
 
       <form class="form-inline my-2 my-lg-0">
-        <INPUT TYPE="BUTTON" class="btn btn-outline-success my-2 my-sm-0" ONCLICK="window.location.href='login/login.php'">Login</INPUT>
+        <INPUT TYPE="BUTTON" class="btn btn-outline-success my-2 my-sm-0" ONCLICK="window.location.href='index.php'">Logout</INPUT>
       </form>
 
     </div>

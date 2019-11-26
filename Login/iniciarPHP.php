@@ -4,7 +4,7 @@
 	$contrasena = $_POST['CONTRASENA'];
 
 	$query2 = "SELECT * FROM usuario WHERE id = $usuario AND contrasena = '$contrasena';";
-	$resultado2 = mysqli_query($conexion, $query2) or die ("Algo salió mal 2...");
+	$resultado2 = mysqli_query($connect, $query2) or die ("Algo salió mal 2...");
 	$nfilas2 = mysqli_num_rows($resultado2);
 
 	if ( $nfilas2>0 )

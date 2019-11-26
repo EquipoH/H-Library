@@ -10,7 +10,7 @@
 	<BODY BGCOLOR="BLUE">
 
 		<BR>
-		<FONT FACE = "gulim" SIZE = 7 COLOR = "WHITE"><CENTER><B>Página WEB</B></CENTER></FONT>
+		<FONT FACE = "gulim" SIZE = 7 COLOR = "WHITE"><CENTER><B>H-Library</B></CENTER></FONT>
 
 		<DIV>
 			<CENTER>
