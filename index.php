@@ -39,6 +39,30 @@ include "php/conexion.php";
 
 
   <h1>Bienvenido, <?php session_start(); echo $_SESSION['usuario'] ?></h1>
+  <?php
+  include "php/conexion.php";
+  $ipaddress = '';
+  if (getenv('HTTP_CLIENT_IP'))
+    $ipaddress = getenv('HTTP_CLIENT_IP');
+  else if (getenv('HTTP_X_FORWARDED_FOR'))
+    $ipaddress = getenv('HTTP_X_FORWARDED_FOR');
+  else if (getenv('HTTP_X_FORWARDED'))
+    $ipaddress = getenv('HTTP_X_FORWARDED');
+  else if (getenv('HTTP_FORWARDED_FOR'))
+    $ipaddress = getenv('HTTP_FORWARDED_FOR');
+  else if (getenv('HTTP_FORWARDED'))
+    $ipaddress = getenv('HTTP_FORWARDED');
+  else if (getenv('REMOTE_ADDR'))
+    $ipaddress = getenv('REMOTE_ADDR');
+  else
+    $ipaddress = 'UNKNOWN';
+
+
+
+  $sql = $connect->query("INSERT INTO `visita` (`id`, `ip`) VALUES (NULL, '" . $ipaddress . "')");
+
+
+  ?>
   <style type="text/css">
     nav li ul {
       display: none;
@@ -204,7 +228,7 @@ include "php/conexion.php";
         include 'php/conexion.php';
 
 
-        $sql = $connect->query("SELECT libro.*,categoria.nombre as categoria,artista.nombre as artista FROM `libro` inner join categoria on categoria.id=libro.categoria inner JOIN artista on artista.id=libro.artista ORDER BY fechaAniadido DESC");
+        $sql    = $connect->query("SELECT libro.*,categoria.nombre as categoria,artista.nombre as artista FROM `libro` inner join categoria on categoria.id=libro.categoria inner JOIN artista on artista.id=libro.artista ORDER BY fechaAniadido DESC");
         $result = array();
 
 
@@ -219,24 +243,24 @@ include "php/conexion.php";
 
 
           echo '
-		
-				<div class="card" style="height: 100% width=20 rem">
-					<img class="card-img-top" src="src/book.jpg" alt="Card image" style="height: 200">
-					<div class="card-body">
-						<h4 class="card-title">' . htmlentities($result[$i]['titulo'], ENT_COMPAT, 'ISO-8859-1', true) . '</h4>
-						<p class="card-text">' . htmlentities($result[$i]['artista'], ENT_COMPAT, 'ISO-8859-1', true)  . '</p>
-            <p class="card-text">' . htmlentities($result[$i]['categoria'], ENT_COMPAT, 'ISO-8859-1', true)  . '</p>
+        
+                <div class="card" style="height: 100% width=20 rem">
+                    <img class="card-img-top" src="src/book.jpg" alt="Card image" style="height: 200">
+                    <div class="card-body">
+                        <h4 class="card-title">' . htmlentities($result[$i]['titulo'], ENT_COMPAT, 'ISO-8859-1', true) . '</h4>
+                        <p class="card-text">' . htmlentities($result[$i]['artista'], ENT_COMPAT, 'ISO-8859-1', true) . '</p>
+            <p class="card-text">' . htmlentities($result[$i]['categoria'], ENT_COMPAT, 'ISO-8859-1', true) . '</p>
             <p class="card-text">Añadido el ' . $result[$i]['fechaAniadido'] . '</p>
-					</div>
-					<div class="card-footer">
-						<form method="post" action="producto" style="margin-bottom: 5px">
-							<input type="hidden" name="id" value="' . $result[$i]['id'] . '">
-							<button class="btn btn-secondary" type="submit">Ver Producto</button>
-						</form>
+                    </div>
+                    <div class="card-footer">
+                        <form method="post" action="producto" style="margin-bottom: 5px">
+                            <input type="hidden" name="id" value="' . $result[$i]['id'] . '">
+                            <button class="btn btn-secondary" type="submit">Ver Producto</button>
+                        </form>
 
-					</div>
-				
-			</div>';
+                    </div>
+                
+            </div>';
         }
 
 
@@ -250,7 +274,21 @@ include "php/conexion.php";
 
 
       <footer>
-        <p>&copy; 2019 Corporativo-H</p>
+
+
+        <p style="display:inline;">&copy; 2019 Corporativo-H</p>
+        <h6 style="display:inline;">Visitas: <span class="badge badge-secondary"><?php
+
+
+                                                                                  $result;
+                                                                                  $sql = $connect->query("SELECT COUNT(*) as numero FROM `visita`");
+
+                                                                                  while ($extraer = $sql->fetch_assoc()) {
+                                                                                    $result = $extraer["numero"];
+                                                                                  }
+
+                                                                                  echo $result;
+                                                                                  ?></span></h6>
         <ul>
           <li style="display:inline;"><a href="redes.html">Redes Sociales </a></li>
         </ul>
