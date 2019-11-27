@@ -164,7 +164,7 @@ include "php/conexion.php";
 
   <div class="bd-example">
     <div id="carouselExampleCaptions" class="carousel slide owl-carousel" data-ride="carousel">
-      <ol class="carousel-indicators">
+      <ol class="carousel-indicator1s">
         <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
         <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
