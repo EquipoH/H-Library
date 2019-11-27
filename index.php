@@ -1,7 +1,7 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <meta charset="UTF-8">
+
 <head>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <meta charset="UTF-8">
@@ -86,7 +86,7 @@
       </ul>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="visitas.html" tabindex="2" >Visitas</a>
+        <a class="nav-link" href="visitas.html" tabindex="2">Visitas</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#" tabindex="3">Que hay de nuevo en la librería</a>
@@ -114,7 +114,7 @@
   </nav>
 
   <div class="bd-example">
-    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+    <div id="carouselExampleCaptions" class="carousel slide owl-carousel" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
@@ -122,14 +122,14 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="src/gonvill.jpg" class="d-block w-100" alt="..." width="500" height="500">
-          <div class="carousel-caption d-none d-md-block">
+          <img src="src/gonvill.jpg" class="d-block w-100" alt="..." width="500" height="500" id="gonvill">
+          <div class=" carousel-caption d-none d-md-block">
             <h5>Gonvill</h5>
             <p>Abre sus puertas a nuevos lectores.</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="src/feria.jpg" class=" d-block w-100" alt="..." width="500" height="500">
+          <img src="src/feria.jpg" class=" d-block w-100" alt="..." width="500" height="500" id="feria">
           <div class="carousel-caption d-none d-md-block">
             <h5>Feria internacional del libro</h5>
             <p>H-Library se invita a participar</p>
@@ -215,5 +215,16 @@
         </ul>
       </footer>
 </body>
+<script type="text/javascript">
+  document.getElementById("gonvill").onclick = function() {
+    alert("se dio clc gonvil");
+    location.href = "https://www.gonvill.com.mx/";
+  };
+
+  document.getElementById("feria").onclick = function() {
+    alert("se dio clc feria");
+    location.href = "feria.html";
+  };
+</script>
 
 </html>
