@@ -272,20 +272,22 @@ include "php/conexion.php";
 
       <footer>
 
-
+        <p style="display:inline;">Fecha de actualización: 27/11/2019 </p>
+        <br>
         <p style="display:inline;">&copy; 2019 Corporativo-H</p>
-        <h6 style="display:inline;">Visitas: <span class="badge badge-secondary"><?php
+        <h6 style="display:inline;">Visitas: <span class="badge badge-secondary">
+        <?php
+          $result;
+          $sql = $connect->query("SELECT COUNT(*) as numero FROM `visita`");
 
+          while ($extraer = $sql->fetch_assoc()) {
+            $result = $extraer["numero"];
+          }
 
-                                                                                  $result;
-                                                                                  $sql = $connect->query("SELECT COUNT(*) as numero FROM `visita`");
-
-                                                                                  while ($extraer = $sql->fetch_assoc()) {
-                                                                                    $result = $extraer["numero"];
-                                                                                  }
-
-                                                                                  echo $result;
-                                                                                  ?></span></h6>
+          echo $result;
+        ?>
+          
+        </span></h6>
         <ul>
           <li style="display:inline;"><a href="redes.html">Redes Sociales </a></li>
         </ul>
