@@ -250,7 +250,7 @@ include "php/conexion.php";
             <p class="card-text">Añadido el ' . $result[$i]['fechaAniadido'] . '</p>
                     </div>
                     <div class="card-footer">
-                        <form method="post" action="producto" style="margin-bottom: 5px">
+                        <form method="post" action="producto.php" style="margin-bottom: 5px">
                             <input type="hidden" name="id" value="' . $result[$i]['id'] . '">
                             <button class="btn btn-secondary" type="submit">Ver Producto</button>
                         </form>
