@@ -15,7 +15,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <title>Producto</title>
+  <title>Compras</title>
   <style>
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -56,62 +56,53 @@ li a:hover {
  <ul>
   <li><a class="active" href="index.php">Inicio</a></li>
 </ul>
-	
-<?php
-include 'php/conexion.php';
+  <br>
+  <h1 style="text-align: center;">Historial de compras</h1>
+  <br>
+  <div class="container">
+    <div class="row">
 
-if(isset($_REQUEST['id'])){
-	$idProducto = $_REQUEST['id'];
-	$idUsuario =  $_SESSION['id'];
-	if(isset($idUsuario)){
-		echo '
-		<form action="compra" method="post">
-		 <p>Número de tarjeta:<input type="text" name="idTarjeta" /></p>
-		 <input type="hidden" name="idLibro" value="' . $idProducto  . '">
-		 <input type="hidden" name="idUsuario" value="' .  $idUsuario . '">
-		 <p><button class="btn btn-secondary" type="submit">Comprar</button></p>
-		</form>';
-	}else{
-		echo "Inicie sesión para poder comprar este producto.";
-	}
-}else if(isset($_REQUEST['idTarjeta']) && isset($_REQUEST['idLibro']) && isset($_REQUEST['idUsuario'])){
-	$idTarjeta = $_REQUEST['idTarjeta'];
-	$idLibro = $_REQUEST['idLibro'];
-	$idUsuario = $_REQUEST['idUsuario'];
-	$sql = $connect->query("SELECT * FROM tarjeta WHERE idTarjeta = {$idTarjeta}");
-	$result = array();
+      <div class="card-columns">
+        <?php
+        include 'php/conexion.php';
+        $idUsuario =  $_SESSION['id'];
+        if(isset($idUsuario)){
+          $sql = $connect->query("SELECT compra.id, libro.titulo, libro.artista, libro.fechaAniadido, libro.categoria, libro.precio, categoria.nombre as categoria,artista.nombre as artista FROM compra INNER JOIN libro ON compra.idLibro = libro.id inner join categoria on categoria.id=libro.categoria inner JOIN artista on artista.id=libro.artista WHERE compra.idUsuario = {$idUsuario} ORDER BY id DESC");
+          $result = array();
 
 
-	$contador = 0;
-    while ($extraer = $sql->fetch_assoc()) {
-      $contador++;
-      $result[] = $extraer;
-    }
 
-    if($contador>0){
-    	$saldo = $result[0]['saldo'];
-		$sql = $connect->query("SELECT * FROM libro WHERE id = {$idLibro}");
-		$result = array();
-	    while ($extraer = $sql->fetch_assoc()) {
-	      $contador++;
-	      $result[] = $extraer;
-	    }
-    	$precio = $result[0]['precio'];
-    	if($saldo>=$precio){
-    		$saldoNuevo = $saldo - $precio;
-			$sql = $connect->query("UPDATE tarjeta SET saldo = {$saldoNuevo} WHERE idTarjeta = {$idTarjeta}");
-			$sql = $connect->query("INSERT INTO compra VALUES(0,{$idLibro},{$idTarjeta})");
-    		echo "Compra exitosa";
-    	}
-    	
-    }else{
-    	echo "Tarjeta inexistente";
-    }
+        while ($extraer = $sql->fetch_assoc()) {
+          $result[] = $extraer;
+        }
 
-}	
-?>
 
+
+        for ($i = 0; $i < sizeof($result); $i++) {
+
+
+          echo '
+    
+        <div class="card" style="height: 100% width=20 rem">
+          <img class="card-img-top" src="src/book.jpg" alt="Card image" style="height: 200">
+          <div class="card-body">
+            <h4 class="card-title">' . htmlentities($result[$i]['titulo'], ENT_COMPAT, 'ISO-8859-1', true) . '</h4>
+            <p class="card-text">' . htmlentities($result[$i]['artista'], ENT_COMPAT, 'ISO-8859-1', true)  . '</p>
+            <p class="card-text">' . htmlentities($result[$i]['categoria'], ENT_COMPAT, 'ISO-8859-1', true)  . '</p>
+            <p class="card-text">Añadido el ' . $result[$i]['fechaAniadido'] . '</p>
+            <p class="card-text">$' . htmlentities($result[$i]['precio'], ENT_COMPAT, 'ISO-8859-1', true)  . '</p>
+          </div>
+        
+          </div>';
+        }
+        }else{
+          echo "Inicie sesión para poder ver su historial de compras.";
+        }
+        ?>
+        <div>
+
+        </div>
+      </div>
 
 </body>
 </html>
-
