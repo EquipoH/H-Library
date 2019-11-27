@@ -147,9 +147,6 @@ include "php/conexion.php";
         <a class="nav-link" href="soporte.html" tabindex="4">Únete y soporte</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" tabindex="5">Tienda</a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link" href="#" tabindex="6">Políticas de privacidad</a>
       </li>
       <li class="nav-item">
