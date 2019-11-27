@@ -13,8 +13,12 @@
   <title>H-Library</title>
 
 <?php
-include "php/conexion.php";
-
+  include "php/conexion.php";
+  session_start();
+  if(isset($_SESSION['usuario']))
+  {
+    echo "hola".$_SESSION['usuario'];
+  }
         $ipaddress = '';
         if (getenv('HTTP_CLIENT_IP'))
           $ipaddress = getenv('HTTP_CLIENT_IP');
@@ -141,19 +145,34 @@ include "php/conexion.php";
         <a class="nav-link" href="visitas.html" tabindex="2">Visitas</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="#" tabindex="3">Que hay de nuevo en la librería</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="soporte.html" tabindex="4">Únete y soporte</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="politicas.html" tabindex="6">Políticas de privacidad</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="compras.php" tabindex="6">Compras</a>
+        <a class="nav-link" href="compras" tabindex="6">Compras</a>
       </li>
       </ul>
       
 
       <form class="form-inline my-2 my-lg-0">
-        <INPUT TYPE="BUTTON" class="btn btn-outline-success my-2 my-sm-0" ONCLICK="window.location.href='libreria.php'">Login</INPUT>
+        <?php
+          if(isset($_SESSION['usuario']))
+          {
+            session_destroy();
+            echo '<a href="index.php">Logout</a>';
+            echo 'ok';
+            //ssssss
+          }
+          else
+          {
+            echo '<a href="Login/iniciarPHP.php">Login</a>';
+          }
+        ?>
       </form>
 
     </div>
@@ -161,7 +180,7 @@ include "php/conexion.php";
 
   <div class="bd-example">
     <div id="carouselExampleCaptions" class="carousel slide owl-carousel" data-ride="carousel">
-      <ol class="carousel-indicator1s">
+      <ol class="carousel-indicators">
         <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
         <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
