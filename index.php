@@ -170,7 +170,7 @@
           }
           else
           {
-            echo '<a href="Login/iniciarPHP.php">Login</a>';
+            echo '<a href="libreria.php">Login</a>';
           }
         ?>
       </form>
