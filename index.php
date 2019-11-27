@@ -11,6 +11,33 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <title>H-Library</title>
+
+<?php
+include "php/conexion.php";
+        $ipaddress = '';
+        if (getenv('HTTP_CLIENT_IP'))
+          $ipaddress = getenv('HTTP_CLIENT_IP');
+        else if (getenv('HTTP_X_FORWARDED_FOR'))
+          $ipaddress = getenv('HTTP_X_FORWARDED_FOR');
+        else if (getenv('HTTP_X_FORWARDED'))
+          $ipaddress = getenv('HTTP_X_FORWARDED');
+        else if (getenv('HTTP_FORWARDED_FOR'))
+          $ipaddress = getenv('HTTP_FORWARDED_FOR');
+        else if (getenv('HTTP_FORWARDED'))
+          $ipaddress = getenv('HTTP_FORWARDED');
+        else if (getenv('REMOTE_ADDR'))
+          $ipaddress = getenv('REMOTE_ADDR');
+        else
+          $ipaddress = 'UNKNOWN';
+          
+
+
+        $sql = $connect->query("INSERT INTO `visita` (`id`, `ip`) VALUES (NULL, '".$ipaddress."')");
+
+
+?>
+
+
   <h1>Bienvenido, <? session_start(); echo $_SESSION['usuario'] php?></h1>
   <h1>Bienvenido, <? session_start(); echo $_SESSION['name'] ?></h1>
   <style type="text/css">
