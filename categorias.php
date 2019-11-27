@@ -26,10 +26,12 @@
 
     .submenu {
       position: absolute;
+      z-index: 99;
     }
 
     .submenu li a {
       display: block;
+      z-index: 99;
       background-color: #F1F1EE;
     }
 
