@@ -136,7 +136,7 @@
           </div>
         </div>
         <div class="carousel-item">
-          <img src="src/openmind.jpg" class="d-block w-100" alt="..." width="500" height="500">
+          <img src="src/openmind.jpg" class="d-block w-100" alt="..." width="500" height="500" id="open" >
           <div class=" carousel-caption d-none d-md-block">
             <h5>OpenMind ¡Comparte tu opinión!</h5>
             <p>Ven este 2 de enero a las 7:00 Pm.</p>
