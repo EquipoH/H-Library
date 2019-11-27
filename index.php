@@ -86,7 +86,7 @@
       </ul>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" tabindex="2">Visitas</a>
+        <a class="nav-link" href="visitas.html" tabindex="2" >Visitas</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#" tabindex="3">Que hay de nuevo en la librería</a>
