@@ -119,6 +119,7 @@
         <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
         <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -134,15 +135,27 @@
             <h5>Feria internacional del libro</h5>
             <p>H-Library se invita a participar</p>
           </div>
+
         </div>
         <div class="carousel-item">
-          <img src="src/openmind.jpg" class="d-block w-100" alt="..." width="500" height="500" id="open" >
+          <img src="src/openmind.jpg" class="d-block w-100" alt="..." width="500" height="500" id="open">
           <div class=" carousel-caption d-none d-md-block">
             <h5>OpenMind ¡Comparte tu opinión!</h5>
             <p>Ven este 2 de enero a las 7:00 Pm.</p>
           </div>
         </div>
+        <div class="carousel-item">
+          <img src="src/openmind.jpg" class="d-block w-100" alt="..." width="500" height="500" id="categorias">
+          <div class=" carousel-caption d-none d-md-block">
+            <h5>Revisa tus catergorias favortitas</h5>
+            <p></p>
+          </div>
+        </div>
+
       </div>
+
+
+
       <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
@@ -217,13 +230,24 @@
 </body>
 <script type="text/javascript">
   document.getElementById("gonvill").onclick = function() {
-    alert("se dio clc gonvil");
+
     location.href = "https://www.gonvill.com.mx/";
   };
 
   document.getElementById("feria").onclick = function() {
-    alert("se dio clc feria");
+
     location.href = "feria.html";
+  };
+
+  document.getElementById("open").onclick = function() {
+
+    location.href = "open.html";
+  };
+
+
+  document.getElementById("categorias").onclick = function() {
+
+    location.href = "categorias.php";
   };
 </script>
 
