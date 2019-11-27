@@ -3,7 +3,7 @@
 
 <head>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -49,6 +49,7 @@
 </head>
 
 <body>
+
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"> </span>
@@ -115,35 +116,48 @@
   <br>
 
   <div class="bd-example">
-    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+    <div id="carouselExampleCaptions" class="carousel slide owl-carousel" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
         <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="src/gonvill.jpg" class="d-block w-100" alt="..." width="500" height="500">
-          <div class="carousel-caption d-none d-md-block">
+          <img src="src/gonvill.jpg" class="d-block w-100" alt="..." width="500" height="500" id="gonvill">
+          <div class=" carousel-caption d-none d-md-block">
             <h5>Gonvill</h5>
             <p>Abre sus puertas a nuevos lectores.</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="src/feria.jpg" class=" d-block w-100" alt="..." width="500" height="500">
+          <img src="src/feria.jpg" class=" d-block w-100" alt="..." width="500" height="500" id="feria">
           <div class="carousel-caption d-none d-md-block">
             <h5>Feria internacional del libro</h5>
             <p>H-Library se invita a participar</p>
           </div>
+
         </div>
         <div class="carousel-item">
-          <img src="src/openmind.jpg" class="d-block w-100" alt="..." width="500" height="500">
+          <img src="src/openmind.jpg" class="d-block w-100" alt="..." width="500" height="500" id="open">
           <div class=" carousel-caption d-none d-md-block">
             <h5>OpenMind ¡Comparte tu opinión!</h5>
             <p>Ven este 2 de enero a las 7:00 Pm.</p>
           </div>
         </div>
+        <div class="carousel-item">
+          <img src="src/books.jpg" class="d-block w-100" alt="..." width="500" height="500" id="categorias">
+          <div class=" carousel-caption d-none d-md-block">
+            <h5>Revisa tus catergorias favortitas</h5>
+            <p></p>
+          </div>
+        </div>
+
       </div>
+
+
+
       <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
