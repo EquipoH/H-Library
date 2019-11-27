@@ -1,4 +1,5 @@
 ﻿<?php
+	session_start();
 	include ("../php/conexion.php");
 	$usuario = $_POST['USUARIO'];
 	$contrasena = $_POST['CONTRASENA'];
@@ -9,6 +10,9 @@
 
 	if ( $nfilas2>0 )
 	{
+		$_SESSION['id'] = $row["id"];
+		$_SESSION['usuario'] = $row["usuario"];
+		$_SESSION['contrasena'] = $row["contrasena"];
 		Header("Location: ../index.php");
 	}
 	else
