@@ -107,10 +107,7 @@
       </form>
 
       <form class="form-inline my-2 my-lg-0">
-        <INPUT TYPE="BUTTON" class="btn btn-outline-success my-2 my-sm-0" ONCLICK="window.location.href='libreria.php'">
-        <?
-          echo "Bienvenido, ".$_SESSION['name'];
-        php?></INPUT>
+        <INPUT TYPE="BUTTON" class="btn btn-outline-success my-2 my-sm-0" ONCLICK="window.location.href='libreria.php'">Login</INPUT>
       </form>
 
     </div>
