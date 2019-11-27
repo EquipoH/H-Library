@@ -100,7 +100,7 @@ if(isset($_REQUEST['id'])){
     	if($saldo>=$precio){
     		$saldoNuevo = $saldo - $precio;
 			$sql = $connect->query("UPDATE tarjeta SET saldo = {$saldoNuevo} WHERE idTarjeta = {$idTarjeta}");
-			$sql = $connect->query("INSERT INTO compra VALUES(0,{$idLibro},{$idTarjeta})");
+			$sql = $connect->query("INSERT INTO compra VALUES(0,{$idLibro},{$idUsuario})");
     		echo "Compra exitosa";
     	}
     	
