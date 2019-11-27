@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html lang="es">
 <meta charset="UTF-8">
 <head>
@@ -106,7 +107,7 @@
       </form>
 
       <form class="form-inline my-2 my-lg-0">
-        <INPUT TYPE="BUTTON" class="btn btn-outline-success my-2 my-sm-0" ONCLICK="window.location.href='index.php'">Logout</INPUT>
+        <INPUT TYPE="BUTTON" class="btn btn-outline-success my-2 my-sm-0" ONCLICK="window.location.href='libreria.php'">Login</INPUT>
       </form>
 
     </div>
