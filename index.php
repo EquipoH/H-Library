@@ -116,7 +116,7 @@ include "php/conexion.php";
           <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" tabindex="0">Datos de la librería</a>
+          <a class="nav-link" href="Datos_De_Libreria.html" tabindex="0">Datos de la librería</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#" tabindex="1">Obras y artistas</a>
