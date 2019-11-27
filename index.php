@@ -38,8 +38,7 @@ include "php/conexion.php";
 ?>
 
 
-  <h1>Bienvenido, <? session_start(); echo $_SESSION['usuario'] php?></h1>
-  <h1>Bienvenido, <? session_start(); echo $_SESSION['name'] ?></h1>
+  <h1>Bienvenido, <?php session_start(); echo $_SESSION['usuario'] ?></h1>
   <style type="text/css">
     nav li ul {
       display: none;

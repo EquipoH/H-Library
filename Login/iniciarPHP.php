@@ -10,9 +10,14 @@
 
 	if ( $nfilas2>0 )
 	{
+		$row = mysqli_fetch_array($resultado2);
 		$_SESSION['id'] = $row["id"];
 		$_SESSION['usuario'] = $row["usuario"];
 		$_SESSION['contrasena'] = $row["contrasena"];
+
+		echo $_SESSION['id'];
+		echo $_SESSION['usuario'];
+		echo $_SESSION['CONTRASENA'];
 		Header("Location: ../index.php");
 	}
 	else
