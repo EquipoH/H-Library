@@ -141,9 +141,6 @@ include "php/conexion.php";
         <a class="nav-link" href="visitas.html" tabindex="2">Visitas</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" tabindex="3">Que hay de nuevo en la librería</a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link" href="soporte.html" tabindex="4">Únete y soporte</a>
       </li>
       <li class="nav-item">
