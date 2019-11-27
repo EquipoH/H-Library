@@ -146,7 +146,7 @@
           </div>
         </div>
         <div class="carousel-item">
-          <img src="src/openmind.jpg" class="d-block w-100" alt="..." width="500" height="500" id="categorias">
+          <img src="src/books.jpg" class="d-block w-100" alt="..." width="500" height="500" id="categorias">
           <div class=" carousel-caption d-none d-md-block">
             <h5>Revisa tus catergorias favortitas</h5>
             <p></p>
