@@ -66,7 +66,7 @@ li a:hover {
         include 'php/conexion.php';
         $idUsuario =  $_SESSION['id'];
         if(isset($idUsuario)){
-          $sql = $connect->query("SELECT libro.titulo, libro.artista, libro.fechaAniadido, libro.categoria, libro.precio, categoria.nombre as categoria,artista.nombre as artista FROM compra INNER JOIN libro ON compra.idLibro = libro.id inner join categoria on categoria.id=libro.categoria inner JOIN artista on artista.id=libro.artista WHERE compra.idUsuario = {$idUsuario} ORDER BY fechaAniadido DESC");
+          $sql = $connect->query("SELECT compra.id, libro.titulo, libro.artista, libro.fechaAniadido, libro.categoria, libro.precio, categoria.nombre as categoria,artista.nombre as artista FROM compra INNER JOIN libro ON compra.idLibro = libro.id inner join categoria on categoria.id=libro.categoria inner JOIN artista on artista.id=libro.artista WHERE compra.idUsuario = {$idUsuario} ORDER BY id DESC");
           $result = array();
 
 
