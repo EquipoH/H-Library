@@ -89,7 +89,7 @@ li a:hover {
             <p class="card-text">Añadido el ' . $result[$i]['fechaAniadido'] . '</p>
           </div>
           <div class="card-footer">
-            <form method="post" action="compra" style="margin-bottom: 5px">
+            <form method="post" action="compra.php" style="margin-bottom: 5px">
               <input type="hidden" name="id" value="' . $result[$i]['id'] . '">
               <button class="btn btn-secondary" type="submit">Comprar</button>
             </form>

@@ -141,16 +141,13 @@ include "php/conexion.php";
         <a class="nav-link" href="visitas.html" tabindex="2">Visitas</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" tabindex="3">Que hay de nuevo en la librería</a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link" href="soporte.html" tabindex="4">Únete y soporte</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="politicas.html" tabindex="6">Políticas de privacidad</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="compras" tabindex="6">Compras</a>
+        <a class="nav-link" href="compras.php" tabindex="6">Compras</a>
       </li>
       </ul>
       
@@ -250,7 +247,7 @@ include "php/conexion.php";
             <p class="card-text">Añadido el ' . $result[$i]['fechaAniadido'] . '</p>
                     </div>
                     <div class="card-footer">
-                        <form method="post" action="producto" style="margin-bottom: 5px">
+                        <form method="post" action="producto.php" style="margin-bottom: 5px">
                             <input type="hidden" name="id" value="' . $result[$i]['id'] . '">
                             <button class="btn btn-secondary" type="submit">Ver Producto</button>
                         </form>

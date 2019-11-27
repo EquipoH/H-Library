@@ -65,7 +65,7 @@ if(isset($_REQUEST['id'])){
 	$idUsuario =  $_SESSION['id'];
 	if(isset($idUsuario)){
 		echo '
-		<form action="compra" method="post">
+		<form action="compra.php" method="post">
 		 <p>Número de tarjeta:<input type="text" name="idTarjeta" /></p>
 		 <input type="hidden" name="idLibro" value="' . $idProducto  . '">
 		 <input type="hidden" name="idUsuario" value="' .  $idUsuario . '">
