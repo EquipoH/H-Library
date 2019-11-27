@@ -17,7 +17,7 @@
 
 		echo $_SESSION['id'];
 		echo $_SESSION['usuario'];
-		echo $_SESSION['CONTRASENA'];
+		echo $_SESSION['contrasena'];
 		Header("Location: ../index.php");
 	}
 	else

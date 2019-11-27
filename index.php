@@ -14,6 +14,7 @@
 
 <?php
 include "php/conexion.php";
+
         $ipaddress = '';
         if (getenv('HTTP_CLIENT_IP'))
           $ipaddress = getenv('HTTP_CLIENT_IP');
@@ -38,7 +39,6 @@ include "php/conexion.php";
 ?>
 
 
-  <h1>Bienvenido, <?php session_start(); echo $_SESSION['usuario'] ?></h1>
   <?php
   include "php/conexion.php";
   $ipaddress = '';
