@@ -154,7 +154,7 @@
         <a class="nav-link" href="politicas.html" tabindex="6">Políticas de privacidad</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="compras" tabindex="6">Compras</a>
+        <a class="nav-link" href="compras.php" tabindex="6">Compras</a>
       </li>
       </ul>
       
@@ -163,10 +163,8 @@
         <?php
           if(isset($_SESSION['usuario']))
           {
-            session_destroy();
-            echo '<a href="index.php">Logout</a>';
-            echo 'ok';
-            //ssssss
+            echo '<a href="cerrarsSesion.php">Logout</a>';
+
           }
           else
           {
