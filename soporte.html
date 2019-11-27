@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  display:inline-block;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: center;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+</style>
+<head>
+  <title>Soporte</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body> 
+
+ <ul>
+  <li><a class="active" href="libreria.php">Inicio</a></li>
+  <li><a class="active" href="#home">Soporte Librería H</a></li>
+</ul>
+
+<div class="card">
+  <img class="card-img-top" src="libros.jpg" alt="Card image">
+  <div class="card-body">
+    <h4 class="card-title">¿En qué puedo ayudarlo?</h4>
+    
+  </div>
+</div>
+
+  <div id="accordion">
+    <div class="card">
+      <div class="card-header">
+        <a class="card-link" data-toggle="collapse" href="#collapseOne">
+        ¿Cómo puedo registrarme?
+        </a>
+      </div>
+      <div id="collapseOne" class="collapse show" data-parent="#accordion">
+        
+        <div align="center"><img src="registrar.jpg" alt="Pineapple" style="width:300px;height: 150px; "></div>
+        <div class="card-body">
+         En nuestra página de inicio, en la barra que se encuentra en la parte superior, hay una opción llamada "Log in", la presionas y después buscas la opción de registro. Ahí escribes el usuario y contraseña y presionas el botón
+        "Registrarme"
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <a class="card-link" data-toggle="collapse" href="#collapset">
+        ¿Cómo puedo iniciar sesión?
+        </a>
+      </div>
+      <div id="collapset" class="collapse show" data-parent="#accordion">
+        
+        <div align="center"><img src="iniciar.png" alt="Pineapple" style="width:300px;height: 100px; "></div>
+        <div class="card-body">
+         En nuestra página de inicio, en la barra que se encuentra en la parte superior, hay una opción llamada "Log in", la presionas y escribes tú nombre de usuario y contraseña, y seleccionas el botón "iniciar sesión".
+        </div>
+
+      </div>
+      
+    </div>
+
+     <div class="card">
+      <div class="card-header">
+        <a class="card-link" data-toggle="collapse" href="#collapsetr">
+        ¿En dónde se encuentra su negocio?
+        </a>
+      </div>
+      <div id="collapsetr" class="collapse show" data-parent="#accordion">
+        
+        <div class="card-body">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.574294195143!2d-103.36783518559824!3d20.686891404738073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428ae18bb2e5e21%3A0x4d7ac0c5402b63b4!2sCalle%20Gral.%20Eulogio%20Parra%201543%2C%20Santa%20Teresita%2C%2044600%20Guadalajara%2C%20Jal.!5e0!3m2!1ses!2smx!4v1574817019473!5m2!1ses!2smx" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </div>
+
+      </div>
+      
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <a class="card-link" data-toggle="collapse" href="#collapsetre">
+        ¡No encuentro mi duda!
+        </a>
+      </div>
+      <div id="collapsetre" class="collapse show" data-parent="#accordion">
+        
+        <div class="card-body">
+        Llamanos al número: 33-17-47-31-02, podemos resolver tus dudas.
+        </div>
+
+      </div>
+      
+    </div>
+
+
+  </div>
+
+</body>
+</html>
