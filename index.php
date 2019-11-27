@@ -147,7 +147,7 @@ include "php/conexion.php";
         <a class="nav-link" href="politicas.html" tabindex="6">Políticas de privacidad</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="compras" tabindex="6">Compras</a>
+        <a class="nav-link" href="compras.php" tabindex="6">Compras</a>
       </li>
       </ul>
       
